@@ -1,0 +1,65 @@
+* {
+  margin: 2;
+  box-sizing: border-box;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+body {
+  height: 100svh;
+  background-color: rgb(221, 206, 206);
+}
+
+article {
+  max-width: 400px;
+  margin-inline: auto;
+  margin-top: 20px;
+  border: solid 2px black;
+  padding: 20px;
+  border-radius: 20px;
+}
+
+h1 {
+  text-align: center;
+  color: rgb(140, 78, 2);
+}
+
+h2 {
+  margin-bottom: auto;
+}
+
+nav {
+  background-color: rgb(194, 197, 96);
+  height: 60px;
+  display: flex;
+}
+
+a {
+  position: relative;
+  color: #007bff;
+  text-decoration: none;
+}
+
+a::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: -2px;
+  left: 0;
+  background-color: #ff5733;
+  transition: width 0.3s ease, left 1s ease;
+}
+
+a:hover::after {
+  width: calc(100% + 50px); /* Linjen blir 10px bredere enn selve lenken */
+  left: -5px; /* Flytter linjen 5px til venstre for å sentrere den */
+}
+
+footer {
+  margin-bottom: 20px;
+  text-align: center;
+}
